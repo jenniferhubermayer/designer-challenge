@@ -21,10 +21,6 @@ html{
     font-weight: 300;
 }
 
-body{
-    background-color: #f9f9f9;
-}
-
 p{
     line-height: 1.75;
 }
@@ -35,7 +31,7 @@ h1{
 }
 
 h2{
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 600;
 }
 
@@ -46,12 +42,16 @@ h3{
 }
 
 h3 span img{
-    height: 2rem;
+    height: 3rem;
 }
 
 header p,
 footer p{
     font-size: 1.15rem;
+}
+
+p{
+    font-size: 0.9rem;
 }
 
 /* ===== HEADER ===== */
@@ -76,8 +76,8 @@ header{
     display: grid;
     grid-template-columns: 45px 1fr;
     grid-template-rows: repeat(2, 1fr);
-    padding-left: 20px;
-    padding-top: 20px;
+    padding-left: 25px;
+    padding-top: 25px;
 }
 
 .logo img{
@@ -104,8 +104,8 @@ header h2,
 header p:not(.logo p),
 header a
 {
-    padding-left: 80px;
     width: 50%;
+    padding-left: 80px;
 }
 
 header h2{
@@ -114,7 +114,7 @@ header h2{
 }
 
 header span img{
-    height: 1.25rem;
+    height: 1.5rem;
 }
 
 header a{
@@ -123,6 +123,7 @@ header a{
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 500;
+    font-size: 0.75rem;
 }
 
 /* ----- ANIMATION ----- */
@@ -160,27 +161,27 @@ section:nth-of-type(1) img{
 
 section:nth-of-type(2){
     display: flex;
-    padding: 80px 120px;
+    padding: 220px 120px 40px 120px;
 }
 
 section:nth-of-type(2) h3{
-    width: 35vw;
-    padding-right: 30px;
+    width: 30vw;
+    padding-right: 40px;
 }
 
 section:nth-of-type(2) p{
-    width: 65vw;
+    width: 50vw;
 }
 
 /* ----- AFTER SEVERAL WEEKS ... ----- */
 
 section:nth-of-type(3){
-    padding: 80px 120px 0 120px;
+    padding: 80px 120px 60px 120px;
 }
 
 section:nth-of-type(3) h3{
-    padding-bottom: 80px;
-    width: 40vw;
+    padding-bottom: 140px;
+    width: 50vw;
 }
 
 section:nth-of-type(3) article{
@@ -191,11 +192,16 @@ section:nth-of-type(3) article{
 section:nth-of-type(3) article div{
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-rows: auto 1fr;
-    width: 50%;
-    padding-bottom: 100px;
-    padding-right: 100px;
+    grid-template-rows: 30px 1fr;
+    width: 42%;
+    margin-bottom: 60px;
 }
+
+section:nth-of-type(3) article div:nth-of-type(1),
+section:nth-of-type(3) article div:nth-of-type(3){
+    margin-right: 100px;
+}
+
 
 section:nth-of-type(3) article div img{
     width: 30px;
@@ -238,6 +244,11 @@ section:nth-of-type(4) p:not(div p){
     text-align: center;
 }
 
+section:nth-of-type(4) p:not(div p){
+    font-size: 1.15rem;
+    padding-bottom: 60px;
+}
+
 section:nth-of-type(4) img:not(div img),
 section:nth-of-type(4) div{
     width: 50%;
@@ -253,6 +264,7 @@ section:nth-of-type(4) img:not(div img){
 section:nth-of-type(4) div h3{
     color: var(--lightgrey);
     padding-bottom: 40px;
+    font-size: 4rem;
 }
 
 section:nth-of-type(4) div img{
@@ -330,6 +342,7 @@ input[type="email"]{
     width: 100%;
     background-color: var(--white);
     font-size: 1.25rem;
+    box-shadow:  0px 0px 40px 5px var(--lightgrey);
 }
 
 input[type="submit"]{
@@ -339,7 +352,221 @@ input[type="submit"]{
     font-size: 1rem;
 }
 
+input[type="submit"]:hover{
+    background-image: linear-gradient(to right, var(--red), var(--blue));
+}
+
 footer article{
     text-align: left;
     padding-top: 120px;
+}
+
+footer article p{
+    font-size: 0.9rem;
+}
+
+footer article p span{
+    padding-left: 10px;
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+/* Alles größer als 1201 px: EXTRA LARGE */
+
+@media (min-width: 1201px) {
+    header, 
+    section,
+    footer{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* ----- MEDIUM - 601-900 PX ----- */
+
+@media (min-width: 601px) and (max-width: 900px) {
+    section:nth-of-type(2){
+        flex-direction: column;
+        padding: 120px 60px 40px 60px;
+    }
+    
+    section:nth-of-type(2) h3{
+        width: 80%;
+        padding-right: unset;
+        padding-bottom: 20px;
+    }
+    
+    section:nth-of-type(2) p{
+        width: 100%;
+    }
+
+    section:nth-of-type(3){
+        padding: 60px 60px 60px 60px;
+    }
+
+    section:nth-of-type(3) h3{
+        padding-bottom: 100px;
+        width: 77vw;
+    }
+
+    section:nth-of-type(3) article div{
+        width: 100%;
+        margin-bottom: 60px;
+    }
+
+    section:nth-of-type(3) article div:nth-of-type(1),
+    section:nth-of-type(3) article div:nth-of-type(3){
+        margin-right: unset;
+    }
+}
+
+/* ----- SMALL - BIS 600 PX ----- */
+
+@media (max-width: 600px) {
+
+    /* HEADER */
+
+    header{
+        background-size: 70%;
+        min-height: 100vh;
+        position: relative;
+    }
+
+    header h2{
+        padding-top: 50%;
+        width: 90%;
+        font-size: 3rem;
+    }
+    header p:not(.logo p){
+        width: 80%;
+    }
+
+    header h2, header p:not(.logo p), header a{
+        padding-left: 25px;
+    }
+    .moving-guy img{
+        top: 50px;
+        right: 10%;
+    }
+
+    /* EVERY IDEA STARTS WITH A NEED */
+
+    section:nth-of-type(2){
+        flex-direction: column;
+        padding: 120px 60px 40px 60px;
+    }
+    
+    section:nth-of-type(2) h3{
+        width: 80%;
+        padding-right: unset;
+        padding-bottom: 20px;
+    }
+    
+    section:nth-of-type(2) p{
+        width: 100%;
+    }
+
+    /* AFTER SEVERAL WEEKS ... */
+
+    section:nth-of-type(3){
+        padding: 60px 60px 60px 60px;
+    }
+
+    section:nth-of-type(3) h3{
+        padding-bottom: 100px;
+        width: 77vw;
+    }
+
+    section:nth-of-type(3) article div{
+        width: 100%;
+        margin-bottom: 60px;
+    }
+
+    section:nth-of-type(3) article div:nth-of-type(1),
+    section:nth-of-type(3) article div:nth-of-type(3){
+        margin-right: unset;
+    }
+
+    /* ARE YOU READY? ... */
+
+    section:nth-of-type(4){
+        padding-bottom: 30px;
+    }
+
+    section:nth-of-type(4) h3:not(div h3),
+    section:nth-of-type(4) p:not(div p){
+        width: 80%;
+    }
+
+    section:nth-of-type(4) img:not(div img),
+    section:nth-of-type(4) div{
+        width: 100%;
+
+    }
+
+    section:nth-of-type(4) img:not(div img){
+        max-height: 500px;
+        padding-bottom: unset;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    section:nth-of-type(4) div{
+        display: grid;
+        grid-template-columns: 30% 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    section:nth-of-type(4) div h3{
+        grid-column: 1 / 2;
+        grid-row: 1 / 4;
+    }
+
+    section:nth-of-type(4) div img{
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        display: none;
+    }
+
+    section:nth-of-type(4) div h4{
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    section:nth-of-type(4) div p{
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+    }
+
+    section:nth-of-type(4) img:nth-of-type(2){
+        order: 3;
+    }
+
+    section:nth-of-type(4) div:nth-of-type(2){
+        order: 4;
+    }
+
+    section:nth-of-type(4) img:nth-of-type(4){
+        order: 7;
+    }
+
+    section:nth-of-type(4) div:nth-of-type(4){
+        order: 8;
+    }
+
+    /* FOOTER */
+
+    form{
+        width: 100%;
+    }
+
+    input[type="email"],
+    input[type="submit"]{
+    width: 90%;
+    }
+    footer article{
+    text-align: center;
+    }
 }
