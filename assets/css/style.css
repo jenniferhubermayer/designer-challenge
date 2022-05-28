@@ -21,6 +21,10 @@ html{
     font-weight: 300;
 }
 
+body{
+    background-color: #f9f9f9;
+}
+
 p{
     line-height: 1.75;
 }
@@ -31,13 +35,13 @@ h1{
 }
 
 h2{
-    font-size: 3rem;
-    font-weight: 500;
+    font-size: 4rem;
+    font-weight: 600;
 }
 
 h3{
-    font-size: 2rem;
-    font-weight: 500;
+    font-size: 2.5rem;
+    font-weight: 600;
     line-height: 1.5;
 }
 
@@ -171,7 +175,7 @@ section:nth-of-type(2) p{
 /* ----- AFTER SEVERAL WEEKS ... ----- */
 
 section:nth-of-type(3){
-    padding: 80px 120px 0 80px;
+    padding: 80px 120px 0 120px;
 }
 
 section:nth-of-type(3) h3{
@@ -209,4 +213,133 @@ section:nth-of-type(3) article div h4{
 section:nth-of-type(3) article div p{
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+}
+
+/* ----- ARE YOU READY? ... ----- */
+
+section:nth-of-type(4){
+    padding-bottom: 30px;
+}
+
+section:nth-of-type(4) article{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section:nth-of-type(4) h3:not(div h3){
+    padding-bottom: 30px;
+}
+
+section:nth-of-type(4) h3:not(div h3),
+section:nth-of-type(4) p:not(div p){
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+section:nth-of-type(4) img:not(div img),
+section:nth-of-type(4) div{
+    width: 50%;
+    padding: 60px;
+    object-fit: contain;
+
+}
+
+section:nth-of-type(4) img:not(div img){
+    max-height: 500px;
+}
+
+section:nth-of-type(4) div h3{
+    color: var(--lightgrey);
+    padding-bottom: 40px;
+}
+
+section:nth-of-type(4) div img{
+    padding-bottom: 20px;
+}
+
+section:nth-of-type(4) div h4{
+    padding-bottom: 1rem;
+}
+
+section:nth-of-type(4) img:nth-of-type(1){
+    order: 1;
+}
+
+section:nth-of-type(4) div:nth-of-type(1){
+    order: 2;
+}
+
+section:nth-of-type(4) img:nth-of-type(2){
+    order: 4;
+}
+
+section:nth-of-type(4) div:nth-of-type(2){
+    order: 3;
+}
+
+section:nth-of-type(4) img:nth-of-type(3){
+    order: 5;
+}
+
+section:nth-of-type(4) div:nth-of-type(3){
+    order: 6;
+}
+
+section:nth-of-type(4) img:nth-of-type(4){
+    order: 8;
+}
+
+section:nth-of-type(4) div:nth-of-type(4){
+    order: 7;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+    text-align: center;
+    padding: 0 60px 0 60px;
+}
+
+footer h3,
+footer p{
+    padding-bottom: 30px;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 60%;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="email"],
+input[type="submit"]{
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 500;
+}
+
+input[type="email"]{
+    width: 100%;
+    background-color: var(--white);
+    font-size: 1.25rem;
+}
+
+input[type="submit"]{
+    width: 60%;
+    background-color: var(--red);
+    color: var(--white);
+    font-size: 1rem;
+}
+
+footer article{
+    text-align: left;
+    padding-top: 120px;
 }
