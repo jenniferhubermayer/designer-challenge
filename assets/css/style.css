@@ -21,6 +21,10 @@ html{
     font-weight: 300;
 }
 
+p{
+    line-height: 1.75;
+}
+
 h1{
     font-size: 1.25rem;
     font-weight: 500;
@@ -29,6 +33,16 @@ h1{
 h2{
     font-size: 3rem;
     font-weight: 500;
+}
+
+h3{
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+h3 span img{
+    height: 2rem;
 }
 
 header p,
@@ -52,26 +66,7 @@ header{
     padding-bottom: 60px;
 }
 
-header h2{
-    padding-left: 60px;
-    padding-top: 60px;
-    padding-bottom: 15px;
-    width: 50%;
-}
-
-header p:not(.logo p){
-    padding-left: 60px;
-    width: 50%;
-}
-
-header span img{
-    height: 1.25rem;
-}
-
-header a{
-    padding-left: 60px;
-    padding-top: 2rem;
-}
+/* ----- LOGO LEISTE ----- */
 
 .logo{
     display: grid;
@@ -99,6 +94,35 @@ header a{
     font-size: 0.75rem;
 }
 
+/* ----- TEXTBLOCK ----- */
+
+header h2,
+header p:not(.logo p),
+header a
+{
+    padding-left: 80px;
+    width: 50%;
+}
+
+header h2{
+    padding-top: 60px;
+    padding-bottom: 15px;
+}
+
+header span img{
+    height: 1.25rem;
+}
+
+header a{
+    padding-top: 5rem;
+    color: var(--red);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* ----- ANIMATION ----- */
+
 .moving-guy img{
     position: absolute;
     top: 0;
@@ -118,3 +142,71 @@ header a{
 
 /* ===== MAIN ===== */
 
+section{
+    width: 100vw;
+}
+
+/* ----- WORK OVERVIEW ----- */
+
+section:nth-of-type(1) img{
+    width: 100%;
+}
+
+/* ----- EVERY IDEA STARTS WITH A NEED ----- */
+
+section:nth-of-type(2){
+    display: flex;
+    padding: 80px 120px;
+}
+
+section:nth-of-type(2) h3{
+    width: 35vw;
+    padding-right: 30px;
+}
+
+section:nth-of-type(2) p{
+    width: 65vw;
+}
+
+/* ----- AFTER SEVERAL WEEKS ... ----- */
+
+section:nth-of-type(3){
+    padding: 80px 120px 0 80px;
+}
+
+section:nth-of-type(3) h3{
+    padding-bottom: 80px;
+    width: 40vw;
+}
+
+section:nth-of-type(3) article{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section:nth-of-type(3) article div{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    width: 50%;
+    padding-bottom: 100px;
+    padding-right: 100px;
+}
+
+section:nth-of-type(3) article div img{
+    width: 30px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    margin-right: 20px;
+}
+
+section:nth-of-type(3) article div h4{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    padding-bottom: 0.5rem;
+}
+
+section:nth-of-type(3) article div p{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
