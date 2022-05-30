@@ -253,9 +253,8 @@ section:nth-of-type(4) p:not(div p){
 section:nth-of-type(4) img:not(div img),
 section:nth-of-type(4) div{
     width: 50%;
-    padding: 60px;
+    padding: 0 80px 40px 80px;
     object-fit: contain;
-
 }
 
 section:nth-of-type(4) img:not(div img){
@@ -403,7 +402,7 @@ footer article p span{
     }
 
     section:nth-of-type(3){
-        padding: 60px 60px 60px 60px;
+        padding: 65px 60px 60px 60px;
     }
 
     section:nth-of-type(3) h3{
@@ -420,6 +419,12 @@ footer article p span{
     section:nth-of-type(3) article div:nth-of-type(3){
         margin-right: unset;
     }
+
+    /* ARE YOU READY? ... */
+
+    section:nth-of-type(4) div img{
+        display: none;
+    }
 }
 
 /* ----- SMALL - BIS 600 PX ----- */
@@ -430,13 +435,12 @@ footer article p span{
 
     header{
         background-size: 70%;
-        min-height: 100vh;
         position: relative;
     }
 
     header h2{
         padding-top: 50%;
-        width: 90%;
+        width: 100%;
         font-size: 3rem;
     }
     header p:not(.logo p){
@@ -444,7 +448,9 @@ footer article p span{
     }
 
     header h2, header p:not(.logo p), header a{
-        padding-left: 25px;
+        padding-left: 65px;
+        padding-right: 60px;
+        width: 100%;
     }
     .moving-guy img{
         top: 50px;
@@ -455,13 +461,12 @@ footer article p span{
 
     section:nth-of-type(2){
         flex-direction: column;
-        padding: 120px 60px 40px 60px;
+        padding: 120px 60px 40px 65px;
     }
     
     section:nth-of-type(2) h3{
-        width: 80%;
-        padding-right: unset;
-        padding-bottom: 20px;
+        width: 100%;
+        padding-bottom: 30px;
     }
     
     section:nth-of-type(2) p{
@@ -471,7 +476,7 @@ footer article p span{
     /* AFTER SEVERAL WEEKS ... */
 
     section:nth-of-type(3){
-        padding: 60px 60px 60px 60px;
+        padding: 60px 60px 60px 65px;
     }
 
     section:nth-of-type(3) h3{
@@ -497,7 +502,9 @@ footer article p span{
 
     section:nth-of-type(4) h3:not(div h3),
     section:nth-of-type(4) p:not(div p){
-        width: 80%;
+        width: 100%;
+        padding-left: 65px;
+        padding-right: 60px;
     }
 
     section:nth-of-type(4) img:not(div img),
